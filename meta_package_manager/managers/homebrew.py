@@ -245,7 +245,7 @@ class Homebrew(PackageManager):
         return outdated
 
     def upgrade_cli(self, package_id=None):
-        cmd = [self.cli_path] + self.cli_args + ['upgrade', '--cleanup']
+        cmd = [self.cli_path] + self.cli_args + ['upgrade']
         if package_id:
             cmd.append(package_id)
         return cmd
